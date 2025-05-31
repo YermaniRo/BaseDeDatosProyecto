@@ -1,0 +1,13 @@
+USE `proyecto`;
+DROP procedure IF EXISTS `INSERTAR_FABRICANTE`;
+
+DELIMITER $$
+USE `proyecto`$$
+CREATE PROCEDURE `INSERTAR_FABRICANTE` (
+	IN nom VARCHAR(100)
+)
+BEGIN
+	INSERT INTO fabricante (nombre) VALUES (nom);
+END$$
+
+DELIMITER ;
